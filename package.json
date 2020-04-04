@@ -11,11 +11,12 @@
     "react-scripts": "3.4.1"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "go run ./src/dumbProxy.go & react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test; cd src && go test; cd -",
     "eject": "react-scripts eject"
   },
+  "proxy": "http://localhost:1337/",
   "eslintConfig": {
     "extends": "react-app"
   },

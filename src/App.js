@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from "react";
+import Autocomplete from "./Autocomplete";
 import './App.css';
 
-function App() {
+export default class App extends Component {
+
+  componentDidMount() {
+    fetch("/hub")
+        .then(res => res.json())
+        .then(result =>  this.setState({ revs: result}))
+}
+  
+  
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {this.state && this.state.revs.length > 0 &&
+        <Autocomplete
+        suggestions={this.state.revs}
+        />
+      }
     </div>
   );
 }
-
-export default App;
+}

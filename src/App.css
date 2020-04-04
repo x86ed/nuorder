@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+body {
+  /*changing background color*/
+  background-color: #000;
+}
+.searchbox {
+  /*definint width of form element*/
+  width: 350px;
+  /*centering the form element*/
+  margin: 100px auto;
+}
+input[type="search"] {
+  padding: 10px 15px 10px 50px;
+    font-size: 15px;
+    color: #111;
+    border: none;
+    background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjwhRE9DVFlQRSBzdmcgIFBVQkxJQyAnLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4nICAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz48c3ZnIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDUwMCA1MDAiIGhlaWdodD0iNTAwcHgiIGlkPSJMYXllcl8xIiB2ZXJzaW9uPSIxLjEiIHZpZXdCb3g9IjAgMCA1MDAgNTAwIiB3aWR0aD0iNTAwcHgiIHhtbDpzcGFjZT0icHJlc2VydmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiPjxwYXRoIGNsaXAtcnVsZT0iZXZlbm9kZCIgZD0iTTMwNi4zOSwxNTQuMDljMTkuNjI4LDQuNTQzLDM1LjI0NCwyMS4yNTksMzkuNzg3LDM5LjUyMyAgYzEuNTUxLDguNTQsOC45OTgsMTQuOTg5LDE3LjkwNCwxNC45ODljOS45OTEsMCwxOC4xNjgtOC4xNzUsMTguMTY4LTE4LjE3YzAtMTMuMDgzLTEwLjk5MS0zMi45OC0yNS45ODUtNDcuODgxICBjLTE0LjcxOS0xNC41MzctMzIuMjUyLTI0LjgwMi00Ni42OTUtMjQuODAyYy05Ljk5MSwwLTE4LjE3Miw4LjQ1LTE4LjE3MiwxOC40NDZDMjkxLjM5NiwxNDUuMDk0LDI5Ny44NDcsMTUyLjU0NiwzMDYuMzksMTU0LjA5eiAgIE01Ni42MjksMzkyLjMxMmMtMTQuMDksMTQuMDgtMTQuMDksMzYuOTc5LDAsNTEuMDU5YzE0LjA4LDE0LjA5MiwzNi45ODEsMTQuMDkyLDUwLjk2NSwwbDEwNC4zOTItMTA0LjMwMyAgYzI0LjM0NywxNS4xODEsNTMuMDYyLDIzLjk5MSw4My45NTMsMjMuOTkxYzg3Ljg1NywwLDE1OC45OTUtNzEuMTQyLDE1OC45OTUtMTU4Ljk5OWMwLTg3Ljg1NC03MS4xMzgtMTU4Ljk5NS0xNTguOTk1LTE1OC45OTUgIGMtODcuODU2LDAtMTU4Ljk5NSw3MS4xNDEtMTU4Ljk5NSwxNTguOTk1YzAsMzAuODAyLDguODE5LDU5LjYwNiwyMy45OTIsODMuOTUzTDU2LjYyOSwzOTIuMzEyeiBNMTgyLjM3MSwyMDQuMDYgIGMwLTYyLjY4Nyw1MC44NzUtMTEzLjU2OCwxMTMuNTY4LTExMy41NjhzMTEzLjU2OSw1MC44ODEsMTEzLjU2OSwxMTMuNTY4YzAsNjIuNjk0LTUwLjg3NiwxMTMuNTY5LTExMy41NjksMTEzLjU2OSAgUzE4Mi4zNzEsMjY2Ljc1NCwxODIuMzcxLDIwNC4wNnoiIGZpbGw9IiMwMTAxMDEiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPjwvc3ZnPg==);
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: 8px 12px;
+    background-color: #ddd;
+    min-width: 464px;
+    max-width: 464px;
+    min-height: 35px;
+    line-height: 35px;
+}
+/*now using placeholder property to change color of placholder text and making it consitent accross the browser by use of prefix*/
+input[type="search"]::-webkit-input-placeholder {
+  color: #b1e0de;
+}
+input[type="search"]:-moz-placeholder {
+  /* Firefox 18- */
+  color: #b1e0de;
+}
+input[type="search"]::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #b1e0de;
+}
+input[type="search"]:-ms-input-placeholder {
+  /* interner explorer*/
+  color: #b1e0de;
+}
+li {
+  display: block;
+  /*removing underlines from anchor element*/
+  text-decoration: none;
+  color: #fff;
+  font: 13px/1.2 'GothamBold', sans-serif;
+  background-color: #2eb0a8;
+  padding: 10px;
+}
+ul {
+  /*removing predefined bullet points from list*/
+  list-style: none;
+  /*removing padding from list items*/
+  padding: 0;
+  width: 465px;
+  position: relative;
+  margin: 0 auto;
+}
+ul.suggestions{
+  margin-top: 10px;
+}
+ul li {
+  margin-bottom: 10px;
+}
+ul li.suggestion-active{
+  background-color: #0C8D81;
+}
+/*adding effect when the mouse is hovered over list item*/
+ul li a:hover {
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+ul li ul li a:hover {
+  color: #383838;
+  border-color: #383838;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+ul li ul li:hover {
+  /*transform*/
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/*moving it slightly toware right when hovered*/
+ul li:hover {
+  /*transform*/
+  -webkit-transform: translateX(20px);
+  -moz-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  -o-transform: translateX(20px);
+  transform: translateX(20px);
+}
+/*now first we will hide the suggestion list*/
+.suggestions li {
+  overflow: hidden;
+  height: 55px;
+  text-align: left;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.suggestions li ul li {
+  text-transform: uppercase;
+  background-color: transparent;
   color: white;
+  float: left;
+  margin: 0 2px;
+  height: 18px;
+  line-height: 18px;
+  font-size: 18px;
+}
+.suggestions li ul li a{
+  border-bottom: 3px solid white;
+  text-transform: uppercase;
+  color: white;
+  height: 18px;
+  line-height: 18px;
+  text-decoration: none;
+}
+/*and make the suggestion reappear when user focus on search field*/
+input[type="search"]:focus + .suggestions li {
+  height: 63px;
 }
 
-.App-link {
-  color: #61dafb;
+.byline {
+  text-align: center;
+  font-size: 18px;
+}
+.byline a {
+  text-decoration: none;
+  color: #1f5350;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App{
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: absolute;
 }

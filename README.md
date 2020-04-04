@@ -1,3 +1,43 @@
+# NuOrder Interview Homework 
+#### prepared by [Adam Siegel](mailto:adam.siegel.is@gmail.com)
+
+## Prerequisites
+
+* **Golang** installed (I built it using `go1.13.9 darwin/amd64` but any `>1.0` release should work)
+* **Node.js** installed
+* **npx** installed (you may not need this to run but I built of the latest version of `create-react-app`)
+
+## To Run the App
+
+1. checkout the repo locally
+1. navigate to the project root from your shell
+1. Run 
+```bash
+$> npm start
+```
+
+the browser should open to [http://localhost:3000](http://localhost:3000) (if not click that link)
+
+## Hotkeys
+
+#### Enter 
+sets the user input to the active selection in the suggestion list
+
+#### UP
+moves makes the previous selection in the list the active selection
+
+#### Down
+moves makes the next selection in the list the active selection
+
+## Things I'd like to improve
+#####(If given more time to do this assignment)
+
+1. **Tests** there aren't enough tests here. I'm not a fan of BDD/TDD but acceptance tests are a good practice for any new feature or component. Also it would be good to integrate the Go and Node runners.
+1. **Go Proxy** this should have better error handling & logging. The implementation is rough and completes the assignment but I'd never use it as a production service.
+1. **API Integration with GitHub** this should be authenticated instead of anonymous. (too large scope for this project)
+1. **AJAX** the API requests should probably cached server side intitally & be refreshed when the input to search changes.
+1. **Flux/Redux** this project should have an event driven in browser datastore to follow best React practices
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -6,8 +46,9 @@ In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.<br />
+Runs the app in the development mode and starts the go proxy app.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000/hub](http://localhost:3000/hub) to view the github API proxy
 
 The page will reload if you make edits.<br />
 You will also see any lint errors in the console.
@@ -26,43 +67,3 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
