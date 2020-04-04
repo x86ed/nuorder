@@ -30,7 +30,7 @@ moves makes the previous selection in the list the active selection
 moves makes the next selection in the list the active selection
 
 ## Things I'd like to improve
-#####(If given more time to do this assignment)
+##### (If given more time to do this assignment)
 
 1. **Tests** there aren't enough tests here. I'm not a fan of BDD/TDD but acceptance tests are a good practice for any new feature or component. Also it would be good to integrate the Go and Node runners.
 1. **Go Proxy** this should have better error handling & logging. The implementation is rough and completes the assignment but I'd never use it as a production service.
